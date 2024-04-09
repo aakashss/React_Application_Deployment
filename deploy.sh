@@ -1,5 +1,4 @@
 #!/bin/bash
-echo "Starting the Deployment...."
 source build.sh
 
 container_name="nginx-prod01"
