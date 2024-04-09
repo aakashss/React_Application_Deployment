@@ -13,7 +13,7 @@ else
   exit 1
 fi
 
-compose_file="/home/aakash/capstoneproject/devops-build/build/docker-compose.yml"
+compose_file="docker-compose.yml"
 
 docker-compose -f "$compose_file" build
 
