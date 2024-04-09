@@ -16,17 +16,9 @@ pipeline {
         git branch: "${env.BRANCH_NAME}", credentialsId: 'aakashss', url: 'https://github.com/aakashss/project.git'	      
       }
   }
-    stage('Build Docker Image dev') {
+    stage('Build Docker Image (dev)') {
       when {
         expression { branch =~ /(.*)dev$/ }
-      }
-      steps {
-        sh 'docker build -t aakashss/dev:${env.BRANCH_NAME} .'
-      }
-    }
-    stage('Build Docker Image prod') {
-      when {
-        expression { branch =~ /(.*)prod$/ }
       }
       steps {
         sh 'docker build -t aakashss/dev:${env.BRANCH_NAME} .'
@@ -43,7 +35,15 @@ pipeline {
         }
       }
     }
-    stage('Push Docker Image prod') {
+    stage('Build Docker Image (prod)') {
+      when {
+        expression { branch =~ /(.*)prod$/ }
+      }
+      steps {
+        sh 'docker build -t aakashss/dev:${env.BRANCH_NAME} .'
+      }
+    }
+    stage('Push Docker Image (prod)') {
       when {
         expression { branch =~ /(.*)prod$/ }
       }
