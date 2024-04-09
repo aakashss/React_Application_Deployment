@@ -48,7 +48,7 @@ pipeline {
         expression { branch =~ /(.*)prod$/ }
       }
       steps {
-        withCredentials([usernamePassword(credentialsId: 'aakashss', usernameVariable: 'aakashss', passwordVariable 'M2RV(3Sy2Jd@EUJ')]) {
+        withCredentials([usernamePassword(credentialsId: 'aakashss', usernameVariable: 'aakashss', passwordVariable: 'M2RV(3Sy2Jd@EUJ')]) {
         sh "docker login -u $USERNAME -p $PASSWORD"
         sh 'docker push aakashss/prod:latest'
         }
