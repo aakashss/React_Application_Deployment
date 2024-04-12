@@ -1,5 +1,5 @@
 #!/bin/bash
-git_branch = $(git rev-parse --abbrev-ref HEAD)
+git_branch=$(git rev-parse --abbrev-ref HEAD)
 if [ "$git_branch" = "dev" ]; then
   sh './build.sh'
   docker login -u aakshss -p dckr_pat_34-PWs-O163dyrKIzbzTPRuTXas
