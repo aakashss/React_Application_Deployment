@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Get the current branch name
+git checkout dev
 git_branch=$(git rev-parse --abbrev-ref HEAD)
 
 if [ "$git_branch" = "dev" ]; then
