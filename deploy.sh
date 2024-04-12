@@ -1,6 +1,17 @@
 #!/bin/bash
-source build.sh
-
+#source build.sh
+#GIT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+#if [[ $GIT_BRANCH == dev ]]; then
+#  chmod +x build.sh
+#  source build.sh
+#  docker login -u aakashss -p dckr_pat_34-PWs-O163dyrKIzbzTPRuTXas
+#  docker tag $image_name:$image_tag aakashss/dev
+#  docker push aakashss/dev:devnginxcap
+#elif [[ $GIT_BRANCH == prod ]]; then
+#  source build.sh
+#  docker tag $image_name:$image_tag aakashss/prod
+#  docker push aakashss/prod:prodnginxcap
+#fi
 container_name="nginx-prod01"
 
 #docker pull "$image_name:$image_tag"

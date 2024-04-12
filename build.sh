@@ -1,6 +1,6 @@
 #!/bin/bash
 
-image_name="nginx"
+image_name="myreactapp"
 image_tag="1.21.6-alpine"
 
 docker build -t "$image_name:$image_tag" .
