@@ -4,7 +4,7 @@
 #if [[ $GIT_BRANCH == dev ]]; then
 #  chmod +x build.sh
 #  source build.sh
-#  docker login -u aakashss -p dckr_pat_34-PWs-O163dyrKIzbzTPRuTXas
+#  docker login -u aakashss -p dckr_p
 #  docker tag $image_name:$image_tag aakashss/dev
 #  docker push aakashss/dev:devnginxcap
 #elif [[ $GIT_BRANCH == prod ]]; then
